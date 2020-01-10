@@ -28,7 +28,7 @@ export default class EmployeeService {
   }
 
   filterByName(wantedString) {
-    return this.employee.filter(item => item.imie === wantedString);
+    return this.employee.filter(item => item.imie.toLowerCase() === wantedString.toLowerCase());
   }
   
   filterByDepartaments(departaments) {
